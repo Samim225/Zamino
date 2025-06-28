@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Success Navigator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>SUCCESS NAVIGATOR</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">AI Assistant</a>
+    </nav>
+  </header>
+
+  <div class="sidebar">
+    <ul>
+      <li><a href="#">Timer & To-Do List</a></li>
+      <li><a href="#">Date Today</a></li>
+      <li><a href="#">World Clock</a></li>
+      <li><a href="#">AI Assistant</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <h2>Welcome Ali<span>🎯</span></h2>
+
+    <div class="cards">
+      <div class="card"><h3>Bodybuilder</h3><p>Take progress-photos<br>Use workout timer</p></div>
+      <div class="card"><h3>Doctor</h3><p>Take weekly IQ tests<br>Studying with Pomodoro</p></div>
+      <div class="card"><h3>Developer</h3><p>Solve programming challenges<br>Watch motivational</p></div>
+      <div class="card"><h3>Footballer</h3><p>Perform training drills<br>Save practice videos</p></div>
+    </div>
+
+    <div class="todo-section">
+      <h3>Pomodoro Timer & To-Do List</h3>
+      <div class="timer">
+        <span id="timerDisplay">25:00</span>
+        <button onclick="startTimer()">Start</button>
+      </div>
+      <ul class="todo">
+        <li><input type="checkbox"> Read for 30 minutes</li>
+        <li><input type="checkbox"> Exercise</li>
+        <li><input type="checkbox"> Work on project</li>
+      </ul>
+    </div>
+
+    <div class="video">
+      <h4>YOU DON'T KNOW ME, SO...</h4>
+      <video controls width="300">
+        <source src="goggins.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+      <p class="ad">ADVERTISEMENT</p>
+    </div>
+  </main>
+
+  <script>
+    let timerInterval;
+    function startTimer() {
+      let time = 25 * 60;
+      timerInterval = setInterval(() => {
+        const min = Math.floor(time / 60).toString().padStart(2, '0');
+        const sec = (time % 60).toString().padStart(2, '0');
+        document.getElementById('timerDisplay').textContent = `${min}:${sec}`;
+        time--;
+        if (time < 0) clearInterval(timerInterval);
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

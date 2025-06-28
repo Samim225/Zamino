@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8fafc;
+}
+header {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.sidebar {
+  width: 220px;
+  background: #152b49;
+  position: fixed;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  padding-top: 1em;
+  color: white;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar li {
+  margin: 1em 0;
+  text-align: center;
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+main {
+  margin-left: 240px;
+  padding: 2em;
+}
+.cards {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+.card {
+  flex: 1 1 200px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.todo-section {
+  margin-top: 2em;
+  background: #fff;
+  padding: 1em;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.timer {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+.todo li {
+  margin: 0.5em 0;
+}
+.video {
+  margin-top: 2em;
+}
+.ad {
+  font-size: 0.8em;
+  color: gray;
+}
